@@ -148,8 +148,10 @@ function supDel(sid,th)
         data: {'code':sid},
         dataType: "json",
         success: function(result){
+            $('.alert-success').remove();
             $('#cdan').hide();
             $('#cdan').show();
+            $(window).scrollTop(0);
   }});
 
   $(th).closest("tr").remove();
